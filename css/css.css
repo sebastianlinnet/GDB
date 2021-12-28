@@ -1,7 +1,8 @@
 /* body og general */
 html, body {
-    /* padding: 0;
-    margin: 0; */
+    padding: 0;
+    margin-left: 3em;
+    margin-right: 3em;
     background: #1e1e1e;
     scroll-behavior: smooth;
   }
@@ -22,6 +23,10 @@ h1 {
     margin-top: 0;
 }
 
+h1.section-heading, h2.section-heading, h3.section-heading {
+    color:tomato;
+}
+
 h2 {
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 3.5em;
@@ -34,7 +39,7 @@ h3 {
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 2.5em;
     letter-spacing: -5px;
-    color: #343434;
+    color: #f0ffff;
     margin-top: 0;
 }
 
@@ -47,9 +52,32 @@ a:hover {
     text-decoration: none;
 }
 
+.fas {
+    transition: ease-in-out 0.2s;
+}
+
+.fas:hover {
+    color: tomato !important;
+}
+
+@media only screen and (max-width:1100px){
+    h1 {
+        font-size:3em;
+        letter-spacing: initial;
+    }
+    h2 {
+        font-size: 2em;
+        letter-spacing: initial;
+    }
+    h3 {
+        font-size: 1em;
+        letter-spacing: initial;
+    }
+} 
+
 /* head */
 .head {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,10 +86,9 @@ a:hover {
 .head-text {
     padding-top: 12rem;
     padding-bottom: 12rem;
-    padding-left: 8em;
-    padding-right: 8rem;
     display: inline-block;
     width: 100%;
+    text-align: center;
 }
 
 
@@ -81,8 +108,8 @@ a:hover {
 } */
 
 #sectionA.col-xl-6 {
-    background-color: #f0ffff;
-    height:100vh;
+    /* background-color: #f0ffff; */
+    height:90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +118,16 @@ a:hover {
 } 
 
  #sectionB.col-xl-6 {
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+} 
+
+#sectionB-img.col-xl-6 {
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,13 +146,30 @@ a:hover {
         padding-top: 3em;
         padding-bottom: 3em;
     }
+    #middle-man.row {
+        flex-direction: column-reverse;
+    }
+    #sectionB-img.col-xl-6 {
+        max-height: 50vh;
+    }
   }
 
 .roster-imgs {
-    object-fit:cover;
+    object-fit:cover;    
 }
+/* @media only screen and (max-width: 1100px){
+    .roster-imgs {
+        max-height: 50vh;
+        object-fit: cover;
+    }
+  } */
+
 
 /* footer */
 .foot {
-    height: 100vh;
+    height: 60vh;
+}
+
+#footer.row {
+    text-align: center;
 }
