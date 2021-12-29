@@ -34,8 +34,9 @@
 
     <div class="about">
         <div class="container-fluid">
+            <a name="about"></a>
             <div class="row">
-                <a name="about"></a>
+                
                 <div class="col-xl-6" id="sectionA">
                     <h1 class="section-heading">About
                     </h1>
@@ -61,11 +62,12 @@
 
     <div class="roster">
         <div class="container-fluid">
+            <a name="roster"></a>
             <div class="row" id="middle-man">
-                <a name="roster"></a>
                 <div class="col-xl-6" id="sectionB-img">
                      <img src="imgs\ghostiris.jpg" class="roster-imgs">
                 </div>
+                <a name="roster"></a>
                 <div class="col-xl-6" id="sectionA">
                     <h1 class="section-heading">Artist roster
                     </h1>
@@ -140,13 +142,13 @@ function getHello() {
     var text = "";
     const date = new Date();
 
-    if (date.getHours() > 6 && date.getHours() < 11) {
+    if (date.getHours() > 4 && date.getHours() < 11) {
         text = "Good morning.";
     } 
     else if (date.getHours() > 11 && date.getHours() < 17) {
         text = "Good afternoon.";
     } 
-    else if (date.getHours() > 17 && date.getHours() < 6) {
+    else {
         text = "Good evening.";
     }
     document.getElementById("message").innerHTML = text;

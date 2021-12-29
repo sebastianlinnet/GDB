@@ -7,6 +7,13 @@ html, body {
     scroll-behavior: smooth;
   }
 
+@media only screen and (max-width: 800px){
+html, body {
+    margin-left: initial;
+    margin-right: initial;
+}
+}
+
 h1 {
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 4.5em;
@@ -103,12 +110,8 @@ a:hover {
   }
 
 /* main*/
-/* .container-fluid {
-    height: 100vh;
-} */
 
 #sectionA.col-xl-6 {
-    /* background-color: #f0ffff; */
     height:90vh;
     display: flex;
     align-items: center;
@@ -151,18 +154,14 @@ a:hover {
     }
     #sectionB-img.col-xl-6 {
         max-height: 50vh;
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
   }
 
 .roster-imgs {
     object-fit:cover;    
 }
-/* @media only screen and (max-width: 1100px){
-    .roster-imgs {
-        max-height: 50vh;
-        object-fit: cover;
-    }
-  } */
 
 
 /* footer */
