@@ -16,12 +16,13 @@
     <title>Go Down Believing Management</title>
 </head>
 
-<body>
+<body onload="getHello()">
 
     <header>
         <div class="head">
             <div class="head-text">
-                <h1>Good afternoon.</h1>
+                <!-- <h1>Good afternoon.</h1> -->
+                <h1 id="message"></h1>
                 <h2>At <span style="color: tomato;">Go Down Believing</span>,
                     <br>we facilitate the future
                     <br>of heavy music.
@@ -135,7 +136,21 @@
 </body>
 
 <script>
+function getHello() {
+    var text = "";
+    const date = new Date();
 
+    if (date.getHours() > 6 && date.getHours() < 11) {
+        text = "Good morning.";
+    } 
+    else if (date.getHours() > 11 && date.getHours() < 17) {
+        text = "Good afternoon.";
+    } 
+    else if (date.getHours() > 17 && date.getHours() < 6) {
+        text = "Good evening.";
+    }
+    document.getElementById("message").innerHTML = text;
+}
 </script>
 
 </html>
