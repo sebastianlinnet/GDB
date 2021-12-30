@@ -19,9 +19,8 @@
 <body onload="getHello()">
 
     <header>
-        <div class="head">
+        <div class="head fade-in">
             <div class="head-text">
-                <!-- <h1>Good afternoon.</h1> -->
                 <h1 id="message"></h1>
                 <h2>At <span style="color: tomato;">Go Down Believing</span>,
                     <br>we facilitate the future
@@ -29,19 +28,19 @@
                 </h2>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#about"><i class="fas fa-chevron-down fa-5x" style="color: #cccccc;"></i></a></div>
+        <div style="text-align: center;"><a href="#about"><i class="fas fa-chevron-down fa-5x"
+                    style="color: #cccccc;"></i></a></div>
     </header>
 
     <div class="about">
         <div class="container-fluid">
-            <a name="about"></a>
             <div class="row">
-                
-                <div class="col-xl-6" id="sectionA">
+                <a name="about"></a>
+                <div class="col-xl-6 fade-in from-left" id="sectionA">
                     <h1 class="section-heading">About
                     </h1>
                 </div>
-                <div class="col-xl-6" id="sectionB">
+                <div class="col-xl-6 fade-in from-right" id="sectionB">
                     <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
                         beatae vitae dicta sunt explicabo.
@@ -53,83 +52,99 @@
                         <br><br>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                         laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
                         in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                        quo voluptas nulla pariatur?"</p>
+                        quo voluptas nulla pariatur?"
+                    </p>
                 </div>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#roster"><i class="fas fa-chevron-down fa-5x" style="color: #cccccc;"></i></a></div>
+        <div style="text-align: center;"><a href="#roster"><i class="fas fa-chevron-down fa-5x"
+                    style="color: #cccccc;"></i></a></div>
     </div>
 
     <div class="roster">
         <div class="container-fluid">
-            <a name="roster"></a>
             <div class="row" id="middle-man">
-                <div class="col-xl-6" id="sectionB-img">
-                     <img src="imgs\ghostiris.jpg" class="roster-imgs">
+                <a name="roster"></a>
+                <div class="col-xl-6 fade-in from-left" id="sectionB-img">
+                    <img src="imgs\ghostiris.jpg">
                 </div>
                 <a name="roster"></a>
-                <div class="col-xl-6" id="sectionA">
+                <div class="col-xl-6 fade-in from-right" id="sectionA">
                     <h1 class="section-heading">Artist roster
                     </h1>
                 </div>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#contact"><i class="fas fa-chevron-down fa-5x" style="color: #cccccc;"></i></a></div>
+        <div style="text-align: center;"><a href="#contact"><i class="fas fa-chevron-down fa-5x"
+                    style="color: #cccccc;"></i></a></div>
     </div>
 
     <div class="contact">
         <div class="container-fluid">
-            <a name="contact"></a>
             <div class="row">
-                <div class="col-xl-6" id="sectionA">
+                <a name="contact"></a>
+                <div class="col-xl-6 fade-in from-left" id="sectionA">
                     <h1 class="section-heading">Contact
                     </h1>
                 </div>
-                <div class="col-xl-6" id="sectionB">
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                        beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
-                        in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                        quo voluptas nulla pariatur?"</p>
+                <div class="col-xl-6 fade-in from-right" id="sectionForm">
+                    <form action="https://formspree.io/f/xqkwndgr" method="POST" id="contactForm" name="contactForm"
+                        class="contactForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="8"
+                                placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <div class="submitting"></div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+        <div style="text-align: center;"><a href="#footer"><i class="fas fa-chevron-down fa-5x"
+                    style="color: #cccccc;"></i></a></div>
     </div>
 
     <footer>
-        <div class="foot">
+        <a name="footer"></a>
+        <div class="foot fade-in">
             <div class="container-fluid">
                 <div class="row" id="footer">
                     <div class="col-sm-4">
                         <h3 class="section-heading">Partners</h3>
                         <p>All Your Bands Needs
-                        <br>Example
-                        <br>Example
+                            <br>Example
+                            <br>Example
                         </p>
                     </div>
                     <div class="col-sm-4">
                         <h3 class="section-heading">Artists</h3>
                         <p>Jinjer
-                        <br>Drag Me Out
-                        <br>Shokran
-                        <br>Ghost Iris
-                        <br>Space of Variations
-                        <br>The Hellfreaks
-                        <br>Khroma
-                        <br>Sinoptik
-                        <br>Shanaye
-                        <br>
+                            <br>Drag Me Out
+                            <br>Shokran
+                            <br>Ghost Iris
+                            <br>Space of Variations
+                            <br>The Hellfreaks
+                            <br>Khroma
+                            <br>Sinoptik
+                            <br>Shanaye
+                            <br>
                         </p>
                     </div>
                     <div class="col-sm-4">
                         <h3 class="section-heading">Socials</h3>
                         <p>Facebook
-                        <br>Instagram</p>
+                            <br>Instagram
+                        </p>
                     </div>
                 </div>
             </div>
@@ -138,21 +153,50 @@
 </body>
 
 <script>
-function getHello() {
-    var text = "";
-    const date = new Date();
 
-    if (date.getHours() > 4 && date.getHours() < 11) {
-        text = "Good morning.";
-    } 
-    else if (date.getHours() > 11 && date.getHours() < 17) {
-        text = "Good afternoon.";
-    } 
-    else {
-        text = "Good evening.";
+    //Welcome message function
+    function getHello() {
+        var text = "";
+        const date = new Date();
+
+        if (date.getHours() > 4 && date.getHours() < 11) {
+            text = "Good morning.";
+        }
+        else if (date.getHours() > 11 && date.getHours() < 17) {
+            text = "Good afternoon.";
+        }
+        else {
+            text = "Good evening.";
+        }
+        document.getElementById("message").innerHTML = text;
     }
-    document.getElementById("message").innerHTML = text;
-}
+
+    //fade-in columns functions
+    const faders = document.querySelectorAll('.fade-in');
+    const sliders = document.querySelectorAll('.slide-in');
+    const appearOptions = {
+        threshold: 0.3,
+
+    };
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    },
+        appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    })
+
+    sliders.forEach(slider => {
+        appearOnScroll.observe(slider);
+    })
 </script>
 
 </html>
