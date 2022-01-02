@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <link rel="stylesheet" href="css\css.css" />
-
     <script src="https://kit.fontawesome.com/bbe27ab0c5.js" crossorigin="anonymous"></script>
-
+    <script defer src="script/script.js"></script>
     <title>Go Down Believing Management</title>
 </head>
 
-<body onload="getHello()">
-
+<body>
     <header>
         <div class="head fade-in">
             <div class="head-text">
@@ -57,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#roster"><i class="fas fa-chevron-down fa-5x"
+        <div class="arrow-down" style="text-align: center;"><a href="#roster"><i class="fas fa-chevron-down fa-5x"
                     style="color: #cccccc;"></i></a></div>
     </div>
 
@@ -66,16 +62,58 @@
             <div class="row" id="middle-man">
                 <a name="roster"></a>
                 <div class="col-xl-6 fade-in from-left" id="sectionB-img">
-                    <img src="imgs\ghostiris.jpg">
+
+                    <div class="carousel">
+                        <img src="imgs\jinjer.JPG" class="roster-imgs">
+                        <h3 class="artist-name">Jinjer</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\dragmeout.JPG" class="roster-imgs">
+                        <h3 class="artist-name">Drag Me Out</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\ghostiris.jpg" class="roster-imgs">
+                        <h3 class="artist-name">Ghost Iris</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\shokran.jpg" class="roster-imgs">
+                        <h3 class="artist-name">Shokran</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\spaceofvariations.jpg" class="roster-imgs">
+                        <h3 class="artist-name">Space Of Variations</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\thehellfreaks.JPG" class="roster-imgs">
+                        <h3 class="artist-name">The Hellfreaks</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\sinoptik.jpg" class="roster-imgs">
+                        <h3 class="artist-name">Sinoptik</h3>
+                    </div>
+
+                    <div class="carousel">
+                        <img src="imgs\khroma.JPG" class="roster-imgs">
+                        <h3 class="artist-name">Khroma</h3>
+                    </div>
+
+                    <a class="prevSlide" onclick="prevSlide(1)"><i class="fas fa-angle-double-left fa-3x"></i></a>
+                    <a class="nextSlide" onclick="nextSlide(1)"><i class="fas fa-angle-double-right fa-3x"></i></a>
+
                 </div>
-                <a name="roster"></a>
                 <div class="col-xl-6 fade-in from-right" id="sectionA">
                     <h1 class="section-heading">Artist roster
                     </h1>
                 </div>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#contact"><i class="fas fa-chevron-down fa-5x"
+        <div class="arrow-down" style="text-align: center;"><a href="#contact"><i class="fas fa-chevron-down fa-5x"
                     style="color: #cccccc;"></i></a></div>
     </div>
 
@@ -88,29 +126,30 @@
                     </h1>
                 </div>
                 <div class="col-xl-6 fade-in from-right" id="sectionForm">
+
                     <form action="https://formspree.io/f/xqkwndgr" method="POST" id="contactForm" name="contactForm"
                         class="contactForm">
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                            <input type="email" class="form-control" name="email" id="contact-email" placeholder="Email"
                                 required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                required>
+                            <input type="text" class="form-control" name="subject" id="contact-subject"
+                                placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control" id="message" cols="30" rows="8"
+                            <textarea name="message" class="form-control" id="contact-message" cols="50" rows="8"
                                 placeholder="Message" required></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <input type="submit" value="Send" class="btn btn-secondary">
                             <div class="submitting"></div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div style="text-align: center;"><a href="#footer"><i class="fas fa-chevron-down fa-5x"
+        <div class="arrow-down" style="text-align: center;"><a href="#footer"><i class="fas fa-chevron-down fa-5x"
                     style="color: #cccccc;"></i></a></div>
     </div>
 
@@ -121,29 +160,29 @@
                 <div class="row" id="footer">
                     <div class="col-sm-4">
                         <h3 class="section-heading">Partners</h3>
-                        <p>All Your Bands Needs
-                            <br>Example
-                            <br>Example
+                        <p><a href="https://www.allyourbandneeds.com/en/">All Your Bands Needs</a>
+                            <br><a href="http://wearetherealpimp.com/" target="_blank">Real Pimp Merchandise</a>
+                            <br><a href="https://captured-live.com/index-en.html" target="_blank">Captured Live</a>
                         </p>
                     </div>
                     <div class="col-sm-4">
                         <h3 class="section-heading">Artists</h3>
-                        <p>Jinjer
-                            <br>Drag Me Out
-                            <br>Shokran
-                            <br>Ghost Iris
-                            <br>Space of Variations
-                            <br>The Hellfreaks
-                            <br>Khroma
-                            <br>Sinoptik
-                            <br>Shanaye
+                        <p><a href="https://www.instagram.com/jinjer_official/" target="_blank">Jinjer</a>
+                            <br><a href="https://www.instagram.com/dragmeoutband/" target="_blank">Drag Me Out</a>
+                            <br><a href="https://www.instagram.com/shokran_band/" target="_blank">Shokran</a>
+                            <br><a href="https://www.instagram.com/ghostirisdk/" target="_blank">Ghost Iris</a>
+                            <br><a href="https://www.instagram.com/spaceofvariations_band/" target="_blank">Space of
+                                Variations</a>
+                            <br><a href="https://www.instagram.com/thehellfreaks/" target="_blank">The Hellfreaks</a>
+                            <br><a href="https://www.instagram.com/khromaband/" target="_blank">Khroma</a>
+                            <br><a href="https://www.instagram.com/sinoptikband/" target="_blank">Sinoptik</a>
                             <br>
                         </p>
                     </div>
                     <div class="col-sm-4">
                         <h3 class="section-heading">Socials</h3>
-                        <p>Facebook
-                            <br>Instagram
+                        <p><a href="https://www.facebook.com/godownbelieving" target="_blank">Facebook</a>
+                            <br><a href="https://www.instagram.com/godownbelieving_mgmt/" target="_blank">Instagram</a>
                         </p>
                     </div>
                 </div>
@@ -151,52 +190,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-
-    //Welcome message function
-    function getHello() {
-        var text = "";
-        const date = new Date();
-
-        if (date.getHours() > 4 && date.getHours() < 11) {
-            text = "Good morning.";
-        }
-        else if (date.getHours() > 11 && date.getHours() < 17) {
-            text = "Good afternoon.";
-        }
-        else {
-            text = "Good evening.";
-        }
-        document.getElementById("message").innerHTML = text;
-    }
-
-    //fade-in columns functions
-    const faders = document.querySelectorAll('.fade-in');
-    const sliders = document.querySelectorAll('.slide-in');
-    const appearOptions = {
-        threshold: 0.3,
-
-    };
-    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
-            }
-        })
-    },
-        appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    })
-
-    sliders.forEach(slider => {
-        appearOnScroll.observe(slider);
-    })
-</script>
 
 </html>

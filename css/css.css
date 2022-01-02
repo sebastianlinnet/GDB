@@ -1,4 +1,4 @@
-/* body og general */
+/* body, general */
 html, body {
     padding: 0;
     margin-left: 3em;
@@ -46,7 +46,7 @@ h2 {
 h3 {
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 2.5em;
-    letter-spacing: -5px;
+    letter-spacing: -2px;
     color: #f0ffff;
     margin-top: 0;
 }
@@ -55,9 +55,13 @@ p {
     font-family: "Arial";
     color: #cccccc;
 }
-
+a {
+    color: #cccccc;
+    transition: ease-in-out 0.1;
+}
 a:hover {
     text-decoration: none;
+    color:#f0ffff;
 }
 
 .fas {
@@ -110,7 +114,10 @@ a:hover {
     }
   }
 
-/* main*/
+/* main */
+.about, .roster, .contact {
+    height: 100vh;
+}
 
 #sectionA.col-xl-6 {
     height:90vh;
@@ -131,12 +138,18 @@ a:hover {
 } 
 
 #sectionB-img.col-xl-6 {
-    height: 90vh;
+    height: 70vh;
+    margin: auto;
     display:flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+} 
+
+.roster-imgs {
+    height: 100%;
+    width: auto;
 } 
 
 #sectionForm.col-xl-6 {
@@ -148,12 +161,50 @@ a:hover {
     max-width: 100%;
 } 
 
+.arrow-down {
+    min-height: 10vh;
+}
+
+@media only screen and (max-width: 1100px){
+    .about, .roster, .contact {
+        height: 100%;
+    }
+    .arrow-down {
+        opacity: 0;
+    }
+    #sectionA.col-xl-6 {
+        height: 100%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    #sectionB.col-xl-6 {
+        height: 100%;
+    }
+    #middle-man.row {
+        flex-direction: column-reverse;
+        margin: 1em;
+    } 
+    #sectionB-img.col-xl-6 {
+        height: 70vh;
+    }
+    #sectionForm.col-xl-6 {
+        height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 850px){
+    #sectionB-img.col-xl-6 {
+        height: 40vh;
+    }
+  }
+
+/* fade-in effekt */
 .fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
 }
 
-.fade-in.appear {
+.fade-in.show {
     opacity: 1;
 }
 
@@ -172,42 +223,55 @@ a:hover {
     opacity: 0;
 }
 
-.from-left.appear, .from-right.appear {
+.from-left.show, .from-right.show {
     transform: translateX(0);
     opacity: 1;
 }
 
-@media only screen and (max-width: 1100px){
-    #sectionA.col-xl-6 {
-        height: 100%;
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-    #sectionB.col-xl-6 {
-        height: 100%;
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-    #middle-man.row {
-        flex-direction: column-reverse;
-    }
-    #sectionB-img.col-xl-6 {
-        max-height: 50vh;
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-  }
-
-/* .roster-imgs {
-    object-fit:none;
-} */
-
-
 /* footer */
 .foot {
     height: 60vh;
+    padding-top: 4em;
 }
 
 #footer.row {
     text-align: center;
 }
+
+@media only screen and (max-width: 1100px){
+    .foot {
+        height: 100%;
+    }
+}
+
+/* carousel (artist roster) */
+.carousel {
+    display: none;
+    height:100%;
+}
+
+.prevSlide, .nextSlide {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    transition: 0.2s ease;
+}
+
+.nextSlide {
+    right: 0;
+}
+.prevSlide {
+    left: 0;
+}
+
+.prevSlide:hover, .nextSlide:hover {
+    color:tomato;
+}
+
+.artist-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
