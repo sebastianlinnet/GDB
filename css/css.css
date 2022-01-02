@@ -162,7 +162,7 @@ a:hover {
 } 
 
 .arrow-down {
-    min-height: 10vh;
+    height: 10vh;
 }
 
 @media only screen and (max-width: 1100px){
