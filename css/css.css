@@ -253,8 +253,8 @@ a:hover {
 .prevSlide, .nextSlide {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     transition: 0.2s ease;
 }
 
