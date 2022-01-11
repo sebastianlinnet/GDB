@@ -209,13 +209,11 @@ a:hover {
 }
 
 .from-left {
-    grid-column: 2 / 3;
     transform: translateX(-50%);
 }
 
 .from-right {
-    grid-column: 3 / 4;
-    transform: translatex(50%);
+    transform: translateX(50%);
 }
 
 .from-left, .from-right {
