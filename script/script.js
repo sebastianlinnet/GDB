@@ -18,30 +18,48 @@ function getHello() {
 getHello();
 
 //fade-in columns functions
-const fade = document.querySelectorAll('.fade-in');
-const slide = document.querySelectorAll('.slide-in');
-const appear = {
-    threshold: 0.3
-};
-const scroll = new IntersectionObserver(function (entries, scroll) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        }
-        else {
-            entry.target.classList.add('show');
-            scroll.unobserve(entry.target);
-        }
-    })
-},
-    appear);
+// const fade = document.querySelectorAll('.fade-in');
+// const slide = document.querySelectorAll('.slide-in');
+// const appear = {
+//     threshold: 0.3
+// };
+// const scroll = new IntersectionObserver(function (entries, scroll) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) {
+//             return;
+//         }
+//         else {
+//             entry.target.classList.add('show');
+//             scroll.unobserve(entry.target);
+//         }
+//     })
+// },
+//     appear);
 
-fade.forEach(fader => {
-    scroll.observe(fader);
-})
+// fade.forEach(fader => {
+//     scroll.observe(fader);
+// })
 
-slide.forEach(slider => {
-    scroll.observe(slider);
+// slide.forEach(slider => {
+//     scroll.observe(slider);
+// })
+
+//fade-in columns functions bedre.
+const faders = document.querySelectorAll('.fade-in');
+
+const scroller = new IntersectionObserver( entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('show', entry.isIntersecting)
+            if (entry.isIntersecting) scroller.unobserve(entry.target)
+        })
+    },
+    {
+        threshold: 0.3
+    }
+)
+
+faders.forEach(fade => {
+    scroller.observe(fade);
 })
 
 //carrousel
