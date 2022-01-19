@@ -9,8 +9,11 @@ function getHello() {
     else if (date.getHours() > 11 && date.getHours() < 17) {
         text = "Good afternoon.";
     }
-    else {
+    else if (date.getHours() > 17 && date.getHours() < 23) {
         text = "Good evening.";
+    }
+    else {
+        text = "Hello.";
     }
     document.getElementById("message").innerHTML = text;
 }
