@@ -3,13 +3,13 @@ function getHello() {
     var text = "";
     const date = new Date();
 
-    if (date.getHours() > 4 && date.getHours() <= 11) {
+    if (date.getHours() >= 4 && date.getHours() <= 10) {
         text = "Good morning.";
     }
-    else if (date.getHours() > 11 && date.getHours() <= 17) {
+    else if (date.getHours() >= 11 && date.getHours() <= 16) {
         text = "Good afternoon.";
     }
-    else if (date.getHours() > 17 && date.getHours() < 23) {
+    else if (date.getHours() >= 17 && date.getHours() <= 23) {
         text = "Good evening.";
     }
     else {
@@ -20,34 +20,7 @@ function getHello() {
 
 getHello();
 
-//fade-in columns functions
-// const fade = document.querySelectorAll('.fade-in');
-// const slide = document.querySelectorAll('.slide-in');
-// const appear = {
-//     threshold: 0.3
-// };
-// const scroll = new IntersectionObserver(function (entries, scroll) {
-//     entries.forEach(entry => {
-//         if (!entry.isIntersecting) {
-//             return;
-//         }
-//         else {
-//             entry.target.classList.add('show');
-//             scroll.unobserve(entry.target);
-//         }
-//     })
-// },
-//     appear);
-
-// fade.forEach(fader => {
-//     scroll.observe(fader);
-// })
-
-// slide.forEach(slider => {
-//     scroll.observe(slider);
-// })
-
-//fade-in columns functions bedre.
+//fade-in columns functions.
 const faders = document.querySelectorAll('.fade-in');
 
 const scroller = new IntersectionObserver( entries => {
