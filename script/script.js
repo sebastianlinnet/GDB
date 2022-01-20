@@ -3,10 +3,10 @@ function getHello() {
     var text = "";
     const date = new Date();
 
-    if (date.getHours() > 4 && date.getHours() <= 11) {
+    if (date.getHours() > 4 && date.getHours() <= 10) {
         text = "Good morning.";
     }
-    else if (date.getHours() > 11 && date.getHours() <= 17) {
+    else if (date.getHours() > 10 && date.getHours() <= 17) {
         text = "Good afternoon.";
     }
     else if (date.getHours() > 17 && date.getHours() < 23) {
